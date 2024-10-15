@@ -18,12 +18,8 @@ app.use("/images", express.static("images"));
 app.use("/tweetImages", express.static("tweetImages"));
 
 mongoose.connect("mongodb+srv://ybansal961:esT5PONdcAgEUM4p@cluster0.cashh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", (err) => {
-  if (err) console.log(err);
+  if (err) console.log("error in connecting");
   else console.log("mongdb is connected");
-});
-
-app.get("/", (req, res) => {
-  console.log("server is running");
 });
 
 //sign in

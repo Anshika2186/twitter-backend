@@ -22,6 +22,10 @@ mongoose.connect("mongodb+srv://ybansal961:esT5PONdcAgEUM4p@cluster0.cashh.mongo
   else console.log("mongdb is connected");
 });
 
+app.get("/", (req, res) => {
+  console.log("server is running");
+});
+
 //sign in
 app.post("/", (req, res) => {
   const userLogin = req.body;
